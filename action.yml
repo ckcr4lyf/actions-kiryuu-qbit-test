@@ -1,0 +1,5 @@
+name: 'Kiryuu Qbit Test'
+description: 'Tests announce against kiryuu'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
