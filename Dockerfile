@@ -15,7 +15,5 @@ COPY entrypoint.sh /
 COPY qBittorrent.conf /
 COPY watched_folders.json /
 
-# For the actual watch dir, we can use absolute paths
-COPY text.txt.torrent /watch/test.txt.torrent
 
 ENTRYPOINT ["/entrypoint.sh"]

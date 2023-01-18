@@ -17,6 +17,8 @@ tcpdump -nnSX port 6969 &>tcpdump.log &
 echo "sleeping for 2 seconds"
 sleep 2
 
+cp $INPUT_TORRENT_NAME /watch/
+
 echo "starting qbittorrent"
 
 /qnox &

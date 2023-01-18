@@ -1,5 +1,9 @@
 name: 'Kiryuu Qbit Test'
 description: 'Tests announce against kiryuu'
+inputs:
+  torrent_name:
+    description: Name of torrent file (should be in workspace home)
+    required: true    
 runs:
   using: 'docker'
   image: 'Dockerfile'
