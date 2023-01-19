@@ -1,7 +1,7 @@
 FROM alpine
 
 # install tcpdump
-RUN apk update && apk upgrade && apk add tcpdump
+RUN apk update && apk upgrade && apk add tcpdump && apk add tree
 
 # Get static qbittorrent, make it executable
 RUN wget -O qnox https://github.com/userdocs/qbittorrent-nox-static/releases/download/release-4.5.0_v2.0.8/x86_64-qbittorrent-nox
