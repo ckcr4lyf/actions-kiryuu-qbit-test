@@ -16,6 +16,7 @@ COPY qBittorrent.conf /
 COPY watched_folders.json /
 
 RUN mkdir -p /watch
+RUN mkdir -p /downloads
 
 
 ENTRYPOINT ["/entrypoint.sh"]

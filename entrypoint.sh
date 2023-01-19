@@ -20,3 +20,7 @@ echo "starting qbittorrent"
 # Sleep for some time to let qbittorrent start, pick up torrent from watch dir
 echo "sleeping for 60 seconds"
 sleep 60
+
+# The path would be something like /downloads/hello.txt
+SHA="$(sha256sum /downloads/$INPUT_FILE_NAME)"
+echo "SHA=$SHA" >> $GITHUB_OUTPUT

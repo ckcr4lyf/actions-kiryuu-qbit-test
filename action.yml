@@ -3,7 +3,13 @@ description: 'Tests announce against kiryuu'
 inputs:
   torrent_name:
     description: Name of torrent file (should be in workspace home)
-    required: true    
+    required: true
+  file_name:
+    description: Name of the file which would be downloaded (e.g. hello.txt)
+    required: true
+outputs:
+  sha:
+    description: sha256sum of the downloaded file
 runs:
   using: 'docker'
   image: 'Dockerfile'
