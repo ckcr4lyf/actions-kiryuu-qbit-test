@@ -24,9 +24,11 @@ sleep 60
 cat ~/.config/qBittorrent/qBittorrent.conf
 cat ~/.local/share/qBittorrent/logs/qbittorrent.log
 
-ls -l /downloads
+echo "ls /downloads"
+ls -la /downloads
 
-tree
+echo "ls ~/Downloads"
+ls -la ~/Downloads
 
 # The path would be something like /downloads/hello.txt
 SHA="$(sha256sum /downloads/$INPUT_FILE_NAME)"
