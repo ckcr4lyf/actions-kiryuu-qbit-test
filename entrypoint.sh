@@ -21,15 +21,8 @@ echo "starting qbittorrent"
 echo "sleeping for 60 seconds"
 sleep 60
 
-cat ~/.config/qBittorrent/qBittorrent.conf
 cat ~/.local/share/qBittorrent/logs/qbittorrent.log
 
-echo "ls /downloads"
-ls -la /downloads
-
-echo "ls ~/Downloads"
-ls -la ~/Downloads
-
 # The path would be something like /downloads/hello.txt
-SHA="$(sha256sum /downloads/$INPUT_FILE_NAME)"
+SHA="$(sha256sum /downloads/$INPUT_FILE_NAME | awk '{print $1}')"
 echo "SHA=$SHA" >> $GITHUB_OUTPUT
