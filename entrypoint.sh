@@ -18,9 +18,18 @@ echo "starting qbittorrent"
 
 /qnox &
 
-# Sleep for some time to let qbittorrent start, pick up torrent from watch dir
-echo "sleeping for 60 seconds"
-sleep 60
+FILE=$INPUT_TORRENT_NAME
+
+for i in {1..60}
+do
+    echo "Checking if file $FILE exists..."
+    if [[ -f "$FILE" ]]; then
+        echo "Found file $FILE"
+        break
+    fi
+    echo "File $FILE not found. Sleeping for 1 second..."
+    sleep 1
+done
 
 cat ~/.local/share/qBittorrent/logs/qbittorrent.log
 
