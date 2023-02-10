@@ -18,12 +18,14 @@ echo "starting qbittorrent"
 
 /qnox &
 
-FILE=$INPUT_TORRENT_NAME
+FILE="/downloads/$INPUT_FILE_NAME"
 
 for i in {1..60}
 do
     echo "Checking if file $FILE exists..."
     if [[ -f "$FILE" ]]; then
+        # Technically qbit may have made it but not finish downloading...
+        # Better we add directive to move downloaded file to diff directory, or add extension...
         echo "Found file $FILE"
         break
     fi
