@@ -20,7 +20,7 @@ echo "starting qbittorrent"
 
 FILE="/downloads/$INPUT_FILE_NAME"
 
-for i in {1..60}
+for i in $(seq 60)
 do
     echo "Checking if file $FILE exists..."
     if [[ -f "$FILE" ]]; then
